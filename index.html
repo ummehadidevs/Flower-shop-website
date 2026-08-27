@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Petalora | Premium Flower Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!--  HEADER -->
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-flower">
+                ✿
+            </div>
+
+            <div class="logo-text">
+                <strong>Petalora</strong>
+                <span>FLOWER STUDIO</span>
+            </div>
+
+        </a>
+
+
+        <nav class="navigation" id="navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#shop">Shop</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button class="header-icon" onclick="openSearch()">
+                <span>⌕</span>
+            </button>
+
+            <button class="header-icon wishlist-header" onclick="scrollToShop()">
+
+                ♡
+
+                <small id="wishlistCount">0</small>
+
+            </button>
+
+            <button class="header-icon cart-header" onclick="openCart()">
+
+                🛍
+
+                <small id="cartCount">0</small>
+
+            </button>
+
+            <button class="menu-button" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SEARCH OVERLAY -->
+
+    <div class="search-overlay" id="searchOverlay">
+
+        <button class="close-search" onclick="closeSearch()">
+            ×
+        </button>
+
+        <div class="search-box">
+
+            <p>SEARCH OUR COLLECTION</p>
+
+            <h2>Find Your Perfect Flower</h2>
+
+            <div class="search-input">
+
+                <input type="text" id="searchInput" placeholder="Search roses, tulips, bouquet..."
+                    oninput="searchProducts()">
+
+                <span>⌕</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--  HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span></span>
+                BEAUTY IN EVERY BLOOM
+            </div>
+
+
+            <h1>
+                Flowers that
+                <em>say it better.</em>
+            </h1>
+
+
+            <p class="hero-description">
+
+                Thoughtfully designed bouquets made
+                from the freshest blooms, delivered
+                with love to your doorstep.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#shop" class="button button-dark">
+                    Explore Collection
+                    <span>→</span>
+                </a>
+
+                <a href="#about" class="text-button">
+                    Our Story
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+
+            <div class="hero-features">
+
+                <div class="hero-feature">
+
+                    <strong>01</strong>
+
+                    <span>
+                        Fresh<br>
+                        Every Day
+                    </span>
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <strong>02</strong>
+
+                    <span>
+                        Hand<br>
+                        Arranged
+                    </span>
+
+                </div>
+
+
+                <div class="hero-feature">
+
+                    <strong>03</strong>
+
+                    <span>
+                        Same Day<br>
+                        Delivery
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-shape"></div>
+
+            <img src="img/images.jpg" alt="Fresh flower bouquet">
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-icon">
+                    ✿
+                </div>
+
+                <div>
+
+                    <strong>Freshly Picked</strong>
+
+                    <span>Every morning</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="vertical-text">
+                PETALORA FLOWER STUDIO
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     CATEGORY STRIP
+========================================= -->
+
+    <section class="category-strip">
+
+        <div class="category-item" onclick="filterProducts('all')">
+
+            <span>✿</span>
+
+            <div>
+                <strong>All Flowers</strong>
+                <small>View collection</small>
+            </div>
+
+        </div>
+
+
+        <div class="category-item" onclick="filterProducts('rose')">
+
+            <span>🌹</span>
+
+            <div>
+                <strong>Roses</strong>
+                <small>Love & romance</small>
+            </div>
+
+        </div>
+
+
+        <div class="category-item" onclick="filterProducts('tulip')">
+
+            <span>🌷</span>
+
+            <div>
+                <strong>Tulips</strong>
+                <small>Elegant & soft</small>
+            </div>
+
+        </div>
+
+
+        <div class="category-item" onclick="filterProducts('sunflower')">
+
+            <span>🌻</span>
+
+            <div>
+                <strong>Sunflowers</strong>
+                <small>Bright & happy</small>
+            </div>
+
+        </div>
+
+
+        <div class="category-item" onclick="filterProducts('bouquet')">
+
+            <span>💐</span>
+
+            <div>
+                <strong>Bouquets</strong>
+                <small>Perfect gifts</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     SHOP
+========================================= -->
+
+    <section class="shop-section" id="shop">
+
+        <div class="section-top">
+
+            <div>
+
+                <div class="eyebrow">
+                    <span></span>
+                    OUR COLLECTION
+                </div>
+
+                <h2>
+                    Made to be <em>remembered.</em>
+                </h2>
+
+            </div>
+
+
+            <p>
+                From romantic roses to cheerful sunflowers,
+                find something beautiful for every moment.
+            </p>
+
+        </div>
+
+
+        <div class="shop-toolbar">
+
+            <div class="filter-buttons">
+
+                <button class="filter active" onclick="filterProducts('all', this)">
+                    All
+                </button>
+
+                <button class="filter" onclick="filterProducts('rose', this)">
+                    Roses
+                </button>
+
+                <button class="filter" onclick="filterProducts('tulip', this)">
+                    Tulips
+                </button>
+
+                <button class="filter" onclick="filterProducts('sunflower', this)">
+                    Sunflowers
+                </button>
+
+                <button class="filter" onclick="filterProducts('bouquet', this)">
+                    Bouquets
+                </button>
+
+            </div>
+
+
+            <select id="sortProducts" onchange="sortProducts()">
+
+                <option value="default">
+                    Sort: Featured
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="name">
+                    Name: A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+            <!-- JavaScript automatically loads products -->
+
+        </div>
+
+
+        <div class="empty-products" id="emptyProducts">
+
+            <div>🌸</div>
+
+            <h3>No flowers found</h3>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     PROMO BANNER
+========================================= -->
+
+    <section class="promo">
+
+        <div class="promo-image">
+
+            <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=1000&q=90"
+                alt="Flower arrangement">
+
+        </div>
+
+
+        <div class="promo-content">
+
+            <div class="eyebrow">
+                <span></span>
+                FOR EVERY SPECIAL MOMENT
+            </div>
+
+            <h2>
+                A little flower
+                <em>goes a long way.</em>
+            </h2>
+
+            <p>
+                Whether it's a birthday, anniversary,
+                celebration or simply a "thinking of you"
+                moment — we've got the perfect bloom.
+            </p>
+
+            <a href="#shop" class="button button-light">
+                Shop Gifts
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     ABOUT
+========================================= -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=90"
+                alt="Beautiful flowers">
+
+
+            <div class="about-number">
+
+                <strong>10</strong>
+
+                <span>
+                    YEARS OF<br>
+                    FLOWER LOVE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="eyebrow">
+                <span></span>
+                OUR STORY
+            </div>
+
+            <h2>
+                Flowers are our
+                <em>love language.</em>
+            </h2>
+
+            <p>
+                Petalora started with one simple belief:
+                beautiful flowers can make ordinary moments
+                unforgettable.
+            </p>
+
+            <p>
+                We work with local growers and carefully
+                hand-pick every bloom before creating
+                each arrangement in our studio.
+            </p>
+
+
+            <div class="about-list">
+
+                <div>
+                    <span>✓</span>
+                    Fresh flowers, every day
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Thoughtfully hand-arranged
+                </div>
+
+                <div>
+                    <span>✓</span>
+                    Delivered with care
+                </div>
+
+            </div>
+
+
+            <a href="#contact" class="button button-dark">
+                Talk to Us
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     SERVICES
+========================================= -->
+
+    <section class="services-section" id="services">
+
+        <div class="section-heading-center">
+
+            <div class="eyebrow center">
+                <span></span>
+                WHY PETALORA
+            </div>
+
+            <h2>
+                More than just
+                <em>flowers.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <div class="service-icon">
+                    ✿
+                </div>
+
+                <h3>
+                    Fresh & Beautiful
+                </h3>
+
+                <p>
+                    Every flower is selected for
+                    freshness, quality and beauty.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <div class="service-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Made With Love
+                </h3>
+
+                <p>
+                    Our florists hand-arrange every
+                    bouquet with special attention.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <div class="service-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Same Day Delivery
+                </h3>
+
+                <p>
+                    Order today and let us deliver
+                    your flowers on the same day.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <div class="service-icon">
+                    ✧
+                </div>
+
+                <h3>
+                    Custom Designs
+                </h3>
+
+                <p>
+                    Tell us your idea and we'll create
+                    something uniquely yours.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     TESTIMONIAL
+========================================= -->
+
+    <section class="testimonial-section">
+
+        <div class="testimonial-inner">
+
+            <div class="quote-mark">
+                “
+            </div>
+
+            <blockquote>
+                The bouquet was even more beautiful
+                than I imagined. Every little detail
+                felt so thoughtful.
+            </blockquote>
+
+            <div class="customer">
+
+                <div class="customer-avatar">
+                    SA
+                </div>
+
+                <div>
+                    <strong>Sarah Ahmed</strong>
+                    <span>Verified Customer</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     ADD FLOWER
+========================================= -->
+
+    <section class="add-section">
+
+        <div class="add-intro">
+
+            <div class="eyebrow">
+                <span></span>
+                YOUR COLLECTION
+            </div>
+
+            <h2>
+                Add your own
+                <em>flowers.</em>
+            </h2>
+
+            <p>
+                Upload a flower image from your computer,
+                give it a name and price, and it will
+                instantly appear in your shop.
+            </p>
+
+            <div class="save-note">
+                ✓ Your products are saved in this browser
+            </div>
+
+        </div>
+
+
+        <form class="add-form" id="flowerForm">
+
+            <div class="upload-area">
+
+                <input type="file" id="flowerImage" accept="image/*" required>
+
+                <label for="flowerImage">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <strong>
+                        Choose Flower Image
+                    </strong>
+
+                    <span>
+                        JPG, PNG or WEBP
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Flower Name</label>
+
+                    <input type="text" id="flowerName" placeholder="e.g. Pink Rose" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Price ($)</label>
+
+                    <input type="number" id="flowerPrice" placeholder="29.99" min="1" step="0.01" required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Category</label>
+
+                    <select id="flowerCategory">
+
+                        <option value="rose">
+                            Roses
+                        </option>
+
+                        <option value="tulip">
+                            Tulips
+                        </option>
+
+                        <option value="sunflower">
+                            Sunflowers
+                        </option>
+
+                        <option value="bouquet">
+                            Bouquets
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Short Description</label>
+
+                    <input type="text" id="flowerDescription" placeholder="Fresh & beautiful">
+
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="button button-dark full-button">
+
+                Add Flower to Shop
+
+                <span>+</span>
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+    <section class="newsletter">
+
+        <div>
+
+            <div class="eyebrow">
+                <span></span>
+                STAY IN BLOOM
+            </div>
+
+            <h2>
+                Get flowers,
+                <em>not spam.</em>
+            </h2>
+
+        </div>
+
+
+        <form onsubmit="subscribeNewsletter(event)">
+
+            <input type="email" placeholder="Your email address" required>
+
+            <button type="submit">
+                Subscribe →
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================================
+     CONTACT
+========================================= -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="contact-heading">
+
+            <div class="eyebrow">
+                <span></span>
+                GET IN TOUCH
+            </div>
+
+            <h2>
+                Let's make
+                <em>something beautiful.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-content">
+
+            <div class="contact-details">
+
+                <div class="contact-detail">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <strong>Visit Us</strong>
+
+                        <p>
+                            Gulshan Avenue<br>
+                            Dhaka, Bangladesh
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <strong>Call Us</strong>
+
+                        <p>
+                            +880 1234 567890
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <strong>Email</strong>
+
+                        <p>
+                            hello@petalora.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" onsubmit="sendMessage(event)">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Your Name</label>
+
+                        <input type="text" placeholder="Your name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input type="email" placeholder="you@email.com" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Subject</label>
+
+                    <input type="text" placeholder="How can we help?" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Message</label>
+
+                    <textarea rows="5" placeholder="Tell us what you're looking for..." required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="button button-dark">
+
+                    Send Message
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     FOOTER
+========================================= -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+
+                    <div class="logo-flower">
+                        ✿
+                    </div>
+
+                    <div class="logo-text">
+
+                        <strong>Petalora</strong>
+
+                        <span>
+                            FLOWER STUDIO
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <p>
+                    Beautiful flowers for beautiful moments.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="#home">Home</a>
+
+                <a href="#shop">Shop</a>
+
+                <a href="#about">Our Story</a>
+
+                <a href="#services">Services</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Help</h4>
+
+                <a href="#contact">Contact</a>
+
+                <a href="#contact">Delivery</a>
+
+                <a href="#contact">FAQs</a>
+
+                <a href="#contact">Custom Orders</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Follow</h4>
+
+                <div class="social-links">
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">Pinterest</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Petalora Flower Studio
+            </span>
+
+            <span>
+                Made with flowers & love ♡
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+     CART SIDEBAR
+========================================= -->
+
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span>YOUR BAG</span>
+
+                <h2>
+                    Shopping Cart
+                </h2>
+
+            </div>
+
+            <button onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <!-- Cart items generated by JS -->
+
+        </div>
+
+
+        <div class="cart-empty" id="cartEmpty">
+
+            <div>
+                🛍
+            </div>
+
+            <h3>
+                Your bag is empty
+            </h3>
+
+            <p>
+                Add something beautiful.
+            </p>
+
+            <button class="button button-dark" onclick="closeCart()">
+                Shop Flowers
+            </button>
+
+        </div>
+
+
+        <div class="cart-bottom">
+
+            <div class="cart-total">
+
+                <span>Subtotal</span>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <button class="button button-dark checkout-button" onclick="checkout()">
+
+                Checkout
+
+                <span>→</span>
+
+            </button>
+
+            <small>
+                Taxes and delivery calculated at checkout.
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+     PRODUCT MODAL
+========================================= -->
+
+    <div class="product-modal" id="productModal">
+
+        <div class="product-modal-box">
+
+            <button class="modal-close" onclick="closeProductModal()">
+                ×
+            </button>
+
+
+            <div class="modal-image">
+
+                <img id="modalImage" src="" alt="Flower">
+
+            </div>
+
+
+            <div class="modal-info">
+
+                <span class="modal-category" id="modalCategory">
+                    FLOWER
+                </span>
+
+                <h2 id="modalName">
+                    Flower Name
+                </h2>
+
+                <div class="modal-stars">
+                    ★★★★★
+                </div>
+
+                <p id="modalDescription">
+                    Beautiful fresh flowers.
+                </p>
+
+                <strong id="modalPrice">
+                    $0.00
+                </strong>
+
+
+                <button class="button button-dark modal-cart-btn" id="modalCartButton">
+
+                    Add to Cart
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+     TOAST
+========================================= -->
+
+    <div class="toast" id="toast">
+
+        <span>✓</span>
+
+        <p id="toastMessage">
+            Added successfully
+        </p>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
